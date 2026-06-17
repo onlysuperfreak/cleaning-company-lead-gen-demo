@@ -343,6 +343,10 @@ h3 {
   display: block;
 }
 
+.perfect-for-button {
+  margin-top: 10px;
+}
+
 .section-tint {
   background: var(--wash);
 }
@@ -449,6 +453,12 @@ h3 {
   gap: 14px;
   align-items: stretch;
   margin-top: 22px;
+}
+
+.tracking-helper {
+  margin: 18px 0 0;
+  color: #d9fff4;
+  font-weight: 800;
 }
 
 .tracking-dashboard-button {
@@ -591,6 +601,13 @@ textarea:focus {
 .dashboard-card {
   padding: 22px;
   background: var(--wash);
+}
+
+.dashboard-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 800;
 }
 
 .dashboard-breakdown-grid {
