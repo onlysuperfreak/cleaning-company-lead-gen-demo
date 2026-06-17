@@ -412,6 +412,12 @@ h3 {
   color: var(--white);
 }
 
+.tracking-dashboard-button {
+  margin-top: 22px;
+  color: var(--blue-dark);
+  background: var(--white);
+}
+
 .metric-card {
   padding: 22px;
   color: var(--ink);
@@ -529,11 +535,88 @@ textarea:focus {
   background: var(--wash);
 }
 
-.lead-table {
+.dashboard-breakdown-grid {
+  display: grid;
+  gap: 16px;
   margin-top: 18px;
-  overflow: hidden;
+}
+
+.breakdown-card,
+.recent-leads-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 12px 35px rgba(18, 49, 63, 0.06);
+}
+
+.breakdown-card {
+  padding: 20px;
+}
+
+.breakdown-card h3,
+.dashboard-panel-heading h3 {
+  margin-bottom: 4px;
+}
+
+.breakdown-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  background: var(--wash);
+  border-radius: 8px;
+}
+
+.breakdown-item span {
+  color: var(--muted);
+}
+
+.breakdown-item strong {
+  display: inline-grid;
+  place-items: center;
+  min-width: 34px;
+  height: 34px;
+  color: var(--blue-dark);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.empty-dashboard-note {
+  margin: 0;
+  color: var(--muted);
+}
+
+.recent-leads-panel {
+  margin-top: 18px;
+}
+
+.dashboard-panel-heading {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.dashboard-panel-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.clear-leads-button {
+  width: 100%;
+  box-shadow: none;
+}
+
+.lead-table {
+  overflow: hidden;
 }
 
 .table-header,
@@ -558,6 +641,11 @@ textarea:focus {
 
 .lead-row span {
   overflow-wrap: anywhere;
+}
+
+.empty-lead-row span {
+  grid-column: 1 / -1;
+  color: var(--muted);
 }
 
 .status-pill {
@@ -629,6 +717,15 @@ textarea:focus {
   .dashboard-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .dashboard-panel-heading {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .clear-leads-button {
+    width: auto;
+  }
 }
 
 @media (min-width: 900px) {
@@ -645,6 +742,10 @@ textarea:focus {
 
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-breakdown-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .site-footer {

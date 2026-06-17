@@ -193,6 +193,7 @@
         <div class="metric-card"><span>CTA clicks</span><strong id="clickMetric">0</strong></div>
         <div class="metric-card"><span>Quote intent</span><strong id="intentMetric">New visitor</strong></div>
       </div>
+      <a class="button tracking-dashboard-button" href="#demo-dashboard">View Demo Dashboard</a>
     </section>
 
     <section id="quote" class="quote-section section-pad">
@@ -258,33 +259,59 @@
       </form>
     </section>
 
-    <section class="dashboard section-pad">
+    <section class="dashboard section-pad" id="demo-dashboard">
       <div class="section-heading">
         <p class="eyebrow">Business Owner Lead Dashboard</p>
-        <h2>A quick view of incoming quote activity.</h2>
+        <h2>A clear view of incoming cleaning leads.</h2>
+        <p>This demo shows how a cleaning business could see which services people request, what property types need cleaning, and which traffic sources produce leads.</p>
       </div>
       <div class="dashboard-grid">
         <div class="dashboard-card">
-          <span>Total demo leads</span>
+          <span>Total leads</span>
           <strong id="leadCount">3</strong>
         </div>
         <div class="dashboard-card">
-          <span>Top service</span>
+          <span>Most requested service</span>
           <strong id="topService">Deep Cleaning</strong>
         </div>
         <div class="dashboard-card">
-          <span>Estimated value</span>
-          <strong id="leadValue">$897</strong>
+          <span>Top traffic source</span>
+          <strong id="topSource">direct/unknown</strong>
         </div>
       </div>
-      <div class="lead-table" aria-label="Recent demo leads">
-        <div class="table-header">
-          <span>Name</span>
-          <span>Service</span>
-          <span>Zip</span>
-          <span>Status</span>
+
+      <div class="dashboard-breakdown-grid">
+        <article class="breakdown-card">
+          <h3>Leads by cleaning service</h3>
+          <div class="breakdown-list" id="serviceBreakdown"></div>
+        </article>
+        <article class="breakdown-card">
+          <h3>Leads by property type</h3>
+          <div class="breakdown-list" id="propertyBreakdown"></div>
+        </article>
+        <article class="breakdown-card">
+          <h3>Leads by traffic source</h3>
+          <div class="breakdown-list" id="sourceBreakdown"></div>
+        </article>
+      </div>
+
+      <div class="recent-leads-panel">
+        <div class="dashboard-panel-heading">
+          <div>
+            <h3>Most recent leads</h3>
+            <p>Newest quote requests appear first.</p>
+          </div>
+          <button class="button button-secondary clear-leads-button" id="clearLeadsButton" type="button">Clear demo leads</button>
         </div>
-        <div id="leadRows"></div>
+        <div class="lead-table" aria-label="Most recent demo leads">
+          <div class="table-header">
+            <span>Name</span>
+            <span>Service</span>
+            <span>Property</span>
+            <span>Source</span>
+          </div>
+          <div id="leadRows"></div>
+        </div>
       </div>
     </section>
 
