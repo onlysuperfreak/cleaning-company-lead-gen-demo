@@ -219,24 +219,39 @@
           <input id="email" name="email" type="email" placeholder="name@example.com">
         </div>
         <div class="form-row">
-          <label for="service">Service needed</label>
-          <select id="service" name="service" required>
-            <option value="">Choose a service</option>
-            <option>Residential Cleaning</option>
-            <option>Deep Cleaning</option>
-            <option>Move-In / Move-Out Cleaning</option>
-            <option>Post-Construction Cleaning</option>
-            <option>Office Cleaning</option>
-            <option>Recurring Cleaning</option>
+          <label for="propertyType">Property type</label>
+          <select id="propertyType" name="propertyType" required>
+            <option value="">Choose a property type</option>
+            <option>Apartment</option>
+            <option>House</option>
+            <option>Office</option>
+            <option>Retail space</option>
+            <option>Other</option>
           </select>
         </div>
         <div class="form-row">
-          <label for="location">Location</label>
-          <input id="location" name="location" type="text" placeholder="Riverdale, Bronx" required>
+          <label for="service">Service needed</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option>Standard cleaning</option>
+            <option>Deep cleaning</option>
+            <option>Move-in/move-out</option>
+            <option>Post-construction cleaning</option>
+            <option>Office cleaning</option>
+            <option>Recurring cleaning</option>
+          </select>
         </div>
         <div class="form-row">
-          <label for="details">Cleaning details</label>
-          <textarea id="details" name="details" rows="4" placeholder="Bedrooms, bathrooms, square footage, timing, or special notes"></textarea>
+          <label for="zipCode">Zip code</label>
+          <input id="zipCode" name="zipCode" type="text" inputmode="numeric" placeholder="10463" required>
+        </div>
+        <div class="form-row">
+          <label for="preferredDate">Preferred date</label>
+          <input id="preferredDate" name="preferredDate" type="date" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message/project details</label>
+          <textarea id="message" name="message" rows="4" placeholder="Bedrooms, bathrooms, square footage, timing, or special notes" required></textarea>
         </div>
         <button class="button form-submit" type="submit">Send Quote Request</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
@@ -266,7 +281,7 @@
         <div class="table-header">
           <span>Name</span>
           <span>Service</span>
-          <span>Area</span>
+          <span>Zip</span>
           <span>Status</span>
         </div>
         <div id="leadRows"></div>

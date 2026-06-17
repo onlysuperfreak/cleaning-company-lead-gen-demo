@@ -17,7 +17,9 @@ This is a fictional portfolio demo for a local cleaning company lead-generation 
 - Three cleaning package cards
 - Placeholder image gallery
 - Built-in ad tracking demo metrics
-- Quote request form
+- Quote request form with required-field validation
+- UTM capture for `utm_source`, `utm_medium`, `utm_campaign`, and `utm_content`
+- Local browser storage for submitted demo leads
 - Business owner lead dashboard
 - FAQ and fictional business disclaimer
 

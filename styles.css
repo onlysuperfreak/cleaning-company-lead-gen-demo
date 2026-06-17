@@ -488,6 +488,15 @@ textarea:focus {
   border-color: var(--blue);
 }
 
+.field-error {
+  border-color: #c43d4b;
+  background: #fff8f9;
+}
+
+.field-error:focus {
+  outline-color: rgba(196, 61, 75, 0.2);
+}
+
 .form-submit {
   width: 100%;
 }
@@ -497,6 +506,22 @@ textarea:focus {
   margin: 0;
   color: var(--blue-dark);
   font-weight: 800;
+}
+
+.form-status-success {
+  padding: 12px;
+  color: #17624f;
+  background: #e9fbf5;
+  border: 1px solid #bcefe0;
+  border-radius: 8px;
+}
+
+.form-status-error {
+  padding: 12px;
+  color: #8f2530;
+  background: #fff0f2;
+  border: 1px solid #f0b7be;
+  border-radius: 8px;
 }
 
 .dashboard-card {
